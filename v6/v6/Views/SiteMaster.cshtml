@@ -1,0 +1,28 @@
+﻿@* Configuración de la página maestra *@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Votaciones Electrónico</h1>
+        </header>
+        <nav>
+            <ul class="menu-vertical">
+                <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+                <li><a href="@Url.Action("Candidatos", "Home")">Candidatos</a></li>
+                <li><a href="@Url.Action("Votaciones", "Home")">Votaciones</a></li>
+                <li><a href="@Url.Action("Resultado", "Home")">Resultado</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            @RenderBody() @* Aquí se inyectará el contenido de las vistas *@
+        </div>
+    </div>
+</body>
+</html>
